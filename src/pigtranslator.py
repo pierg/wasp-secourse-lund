@@ -1,6 +1,5 @@
-def Translate():
+def Translate(sentence):
        lst = ['sh', 'gl', 'ch', 'ph', 'tr', 'br', 'fr', 'bl', 'gr', 'st', 'sl', 'cl', 'pl', 'fl']
-       sentence = input('Type what you would like translated into pig-latin and press ENTER: ')
        sentence = sentence.split()
        for k in range(len(sentence)):
                i = sentence[k]
@@ -18,5 +17,7 @@ def t(str):
        return str[0]+str[1]
 
 if __name__ == "__main__":
-       x = Translate()
-       print(x)
+       english_sentence = input('Type what you would like translated into pig-latin and press ENTER: ')
+       print(english_sentence)
+       pig_sentence = Translate(english_sentence)
+       print(pig_sentence)
