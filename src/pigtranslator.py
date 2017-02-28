@@ -16,12 +16,22 @@ def Translate(sentence):
                        sentence[k] = i[1:]+i[0]+'ay'
        return ' '.join(sentence)
 
+def readfile(filename):
+    try:
+        F = open(filename, "r")
+        return F.read()
+    except OSError as err:
+        print("An error occurred: {0}".format(err))
+        return ""
+
 def t(str):
        return str[0]+str[1]
 
 
 if __name__ == "__main__":
-       english_sentence = input('Type what you would like translated into pig-latin and press ENTER: ')
+       english_sentence = input('If you want to read from a file type "file " and the filename. Otherwise, type what you would like translated into pig-latin and press ENTER: ')
        print(english_sentence)
+       if (english_sentence.partition('file ')[2] != ""):
+           english_sentence = readfile(english_sentence.partition('file ')[2])
        pig_sentence = Translate(english_sentence)
        print(pig_sentence)
