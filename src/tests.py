@@ -27,7 +27,7 @@ class TestTranslate(unittest.TestCase):
     #To test file errors
     def test_file_error(self) :
         s = 'ooohhlala'
-        self.assertEqual(  readfile(s), ""  )
+        self.assertEqual(  readfile(s), "ERROR_READING_FILE")
 
 if __name__ == '__main__':
     unittest.main()
