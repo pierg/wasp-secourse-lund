@@ -21,7 +21,7 @@ def readfile(filename):
         F = open(filename, "r")
         return F.read()
     except OSError as err:
-        print("An error occurred: {0}".format(err))
+        print("An OS error occurred: {0}".format(err))
         return ""
 
 def t(str):
