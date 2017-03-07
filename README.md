@@ -1,1 +1,11 @@
-# wasp-secourse-lund
+# Software Tool Chain Assignment - WASP Software Engineering Course
+## Students: David Mattos, Piergiuseppe Mallozzi, Rebbeka Wohlrab
+
+This is a Python implementation of the Pig Translator.
+Current requirements
+* Python3 or up
+* Any operating system that runs Python 3
+
+To run the application open a terminal window, navigate to the folder containing the code and run
+'python3 src/pigtranslator.py'
+
