@@ -14,3 +14,7 @@ For running the test cases:
 
 `python3 tests.py`
 
+Folders:
+* Assignment: description of the assignment
+* src: source code for the pig translator
+* test_files: additional test files that are needed for the test cases
