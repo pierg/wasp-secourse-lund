@@ -29,8 +29,8 @@ def t(str):
 
 if __name__ == "__main__":
        english_sentence = input('If you want to read from a file type "file " and the filename. Otherwise, type what you would like translated into pig-latin and press ENTER: ')
-       print(english_sentence)
+       print("English:" + english_sentence)
        if (english_sentence.partition('file ')[2] != ""):
            english_sentence = readfile(english_sentence.partition('file ')[2])
        pig_sentence = Translate(english_sentence)
-       print(pig_sentence)
+       print("Latin Pig" + pig_sentence)
