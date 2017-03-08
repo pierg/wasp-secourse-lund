@@ -1,4 +1,8 @@
 def Translate(sentence):
+       #algorithm to translate from english to pig latin
+       #based on the rules set in wikipedia
+       
+       #all possible double consonants
        lst = ['sh', 'gl', 'ch', 'ph', 'tr', 'br', 'fr', 'bl', 'gr', 'st', 'sl', 'cl', 'pl', 'fl']
        sentence = sentence.split()
        for k in range(len(sentence)):
@@ -17,6 +21,7 @@ def Translate(sentence):
        return ' '.join(sentence)
 
 def readfile(filename):
+    #read local file stating a path relative to the current working directory
     try:
         F = open(filename, "r")
         return F.read()
@@ -24,13 +29,16 @@ def readfile(filename):
         return "ERROR_READING_FILE"
 
 def t(str):
+       #appending. Auxiliary function for the Translate function
        return str[0]+str[1]
 
 
 if __name__ == "__main__":
        english_sentence = input('If you want to read from a file type "file " and the filename. Otherwise, type what you would like translated into pig-latin and press ENTER: ')
        print("English: " + english_sentence)
+       #case the user type file first and then the path
        if (english_sentence.partition('file ')[2] != ""):
            english_sentence = readfile(english_sentence.partition('file ')[2])
+       #making the translation
        pig_sentence = Translate(english_sentence)
        print("Latin Pig: " + pig_sentence)
