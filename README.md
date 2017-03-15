@@ -4,7 +4,7 @@
 This is a Python implementation of the Pig Translator.
 Current requirements
 * Python3 or up
-* Any operating system that runs Python 3
+* Any operating system that runs Python 3.2 and up
 
 To run the application open a terminal window, navigate to the folder containing the code and run
 
@@ -18,3 +18,5 @@ Folders:
 * Assignment: description of the assignment
 * src: source code for the pig translator
 * test_files: additional test files that are needed for the test cases
+
+https://travis-ci.org/pierg/wasp-secourse-lund.svg?branch=master
