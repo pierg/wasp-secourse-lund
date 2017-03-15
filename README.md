@@ -19,4 +19,4 @@ Folders:
 * src: source code for the pig translator
 * test_files: additional test files that are needed for the test cases
 
-https://travis-ci.org/pierg/wasp-secourse-lund.svg?branch=master
+[![Build Status](https://travis-ci.org/pierg/wasp-secourse-lund.svg?branch=master)](https://travis-ci.org/pierg/wasp-secourse-lund)
