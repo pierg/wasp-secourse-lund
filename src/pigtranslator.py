@@ -1,14 +1,28 @@
+import re
+
+def extract_punctuation(text):
+    new_text = []
+    for word in text:
+        m = re.split('(\W+)',word)
+        m = list(filter(None, m))
+        new_text.extend(m)
+    return new_text
+
 def Translate(sentence):
        #algorithm to translate from english to pig latin
        #based on the rules set in wikipedia
        
        #all possible double consonants
        lst = ['sh', 'gl', 'ch', 'ph', 'tr', 'br', 'fr', 'bl', 'gr', 'st', 'sl', 'cl', 'pl', 'fl']
-       sentence = sentence.split()
+       sentence = re.split('( )',sentence)
+       sentence = extract_punctuation(sentence)
        for k in range(len(sentence)):
                i = sentence[k]
+               # Do nothing with punctuation
+               if re.match('\W+',i) != None:
+                      sentence[k] == i
                #Rule number 3 in wikipedia
-               if i[0] in ['a', 'e', 'i', 'o', 'u']:
+               elif i[0] in ['a', 'e', 'i', 'o', 'u']:
                        sentence[k] = i+'way'
                #Rule number 2
                elif t(i) in lst:
@@ -18,7 +32,7 @@ def Translate(sentence):
                        sentence[k] = i
                else:
                        sentence[k] = i[1:]+i[0]+'ay'
-       return ' '.join(sentence)
+       return ''.join(sentence)
 
 def readfile(filename):
     #read local file stating a path relative to the current working directory
@@ -40,5 +54,6 @@ if __name__ == "__main__":
        if (english_sentence.partition('file ')[2] != ""):
            english_sentence = readfile(english_sentence.partition('file ')[2])
        #making the translation
+       
        pig_sentence = Translate(english_sentence)
        print("Latin Pig: " + pig_sentence)
